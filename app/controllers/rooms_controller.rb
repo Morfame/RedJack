@@ -65,6 +65,6 @@ class RoomsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def room_params
-      params.require(:room).permit(:bank_id)
+      params.require(:room).permit(:bank_id, :play1_id, :play2_id, :play3_id, :play4_id, :play5_id, :play6_id, :play7_id, :play8_id, :play9_id)
     end
 end

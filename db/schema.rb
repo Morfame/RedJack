@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_03_01_144947) do
+ActiveRecord::Schema[7.0].define(version: 2023_03_02_102700) do
   create_table "banks", force: :cascade do |t|
     t.integer "amt"
     t.integer "play_id"
@@ -41,6 +41,15 @@ ActiveRecord::Schema[7.0].define(version: 2023_03_01_144947) do
     t.integer "bank_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "play1_id"
+    t.integer "play2_id"
+    t.integer "play3_id"
+    t.integer "play4_id"
+    t.integer "play5_id"
+    t.integer "play6_id"
+    t.integer "play7_id"
+    t.integer "play8_id"
+    t.integer "play9_id"
   end
 
 end
