@@ -19,12 +19,12 @@ html, body{
       <% @rooms.each do |room| %>
         <%= render room %>
         <p>
-          <%= button_to "Play this room", room, method: :get %>
+          <h4><%= button_to "Play this room", room, method: :get %></h4>
         </p>
       <% end %>
     </div>
 
-    <%= button_to "New room", new_room_path, :method => :get %>
+    <h4><%= button_to "New room", new_room_path, :method => :get %></h4>
     <%= button_to "Casino Foyer", root_path, method: :get %>
 
   </div>

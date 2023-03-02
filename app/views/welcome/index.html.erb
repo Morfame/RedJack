@@ -12,11 +12,19 @@ html, body{
   <div class="row text-center d-flex align-items-center" style="overflow:hidden; width:75vw; height:75vh; border: 1px solid red">
     <!-- Innermost text, wraps automatically, automatically centered -->
     <h1>Welcome to Morfame Casino</h1>
+
+
     <h2>Make your selection of incredible Games</h2>
 
-    <h3><%= link_to "RedJack Foyer", rooms_path %></h3>
-    <h3><%= link_to "Roulette Foyer", rooms_path %></h3>
-    <h3><%= link_to "Slots Foyer", rooms_path %></h3>
+    <h4><%= button_to "RedJack Foyer", rooms_path, :method => :get %></h4>
+    <h4><%= button_to "Roulette Foyer", rooms_path, :method => :get %></h4>
+    <h4><%= button_to "Slots Foyer", rooms_path, :method => :get %></h4>
   
+    <h2>Admin Functions</h2>
+
+    <h4><%= button_to "Manage Players", rooms_path, :method => :get %></h4>
+    <h4><%= button_to "Manage Cards", rooms_path, :method => :get %></h4>
+    <h4><%= link_to "Manage ???????", rooms_path %></h4>
+
   </div>
 </div>  
