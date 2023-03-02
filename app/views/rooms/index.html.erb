@@ -1,14 +1,31 @@
+<style type="text/css">
+/* Required for proper centering */
+html, body{
+    height:100vh;
+    width:100vw;
+}
+</style>
+
 <p style="color: green"><%= notice %></p>
 
-<h1>Rooms</h1>
+<div class="container-fluid d-flex justify-content-center align-items-center" style="height:100vh; overflow:hidden; border: 2px solid green">
 
-<div id="rooms">
-  <% @rooms.each do |room| %>
-    <%= render room %>
-    <p>
-      <%= link_to "Show this room", room %>
-    </p>
-  <% end %>
+  <div class="row text-center d-flex align-items-center" style="overflow:hidden; width:75vw; height:75vh; border: 1px solid red">
+
+
+    <h1>RedJack Rooms</h1>
+
+    <div id="rooms">
+      <% @rooms.each do |room| %>
+        <%= render room %>
+        <p>
+          <%= button_to "Play this room", room, method: :get %>
+        </p>
+      <% end %>
+    </div>
+
+    <%= button_to "New room", new_room_path, :method => :get %>
+    <%= button_to "Casino Foyer", root_path, method: :get %>
+
+  </div>
 </div>
-
-<%= link_to "New room", new_room_path %>

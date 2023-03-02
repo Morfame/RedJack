@@ -12,12 +12,16 @@
   <% end %>
 
   <div>
-    <%= form.label :bank_id, style: "display: block" %>
-    <%= form.number_field :bank_id %>
-    <%= form.label :play1_id, style: "display: block" %>
-    <%= form.number_field :play1_id %>
-    <%= form.label :play2_id, style: "display: block" %>
-    <%= form.number_field :play2_id %>
+    <ul>
+      <li>
+        <%= form.label :bank_id, style: "display: block" %>
+        <%= form.number_field :bank_id %>
+        <%= form.label :play1_id, style: "display: block" %>
+        <%= form.number_field :play1_id %>
+        <%= form.label :play2_id, style: "display: block" %>
+        <%= form.number_field :play2_id %>
+      </li>
+    </ul>
   </div>
 
   <div>

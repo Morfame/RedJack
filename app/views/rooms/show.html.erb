@@ -1,10 +1,22 @@
+<style type="text/css">
+/* Required for proper centering */
+html, body{
+    height:100vh;
+    width:100vw;
+}
+</style>
+
 <p style="color: green"><%= notice %></p>
 
-<%= render @room %>
-
-<div>
-  <%= link_to "Edit this room", edit_room_path(@room) %> |
-  <%= link_to "Back to rooms", rooms_path %>
-
-  <%= button_to "Destroy this room", @room, method: :delete %>
+<div class="container-fluid d-flex justify-content-center align-items-center" style="height:100vh; overflow:hidden; border: 2px solid green">
+  <div class="row text-center d-flex align-items-center" style="overflow:hidden; width:75vw; height:75vh; border: 1px solid red">
+    <h1>Deal the Cards - Let's go!</h1>
+    <%= render @room %>
+    <div>
+      <%= button_to "Edit this room", edit_room_path(@room), :method => :get %>
+      <%= button_to "Back to rooms", rooms_path, :method => :get %>
+      <%= button_to "Deal the Cards", rooms_path, :method => :get %>
+      <%= button_to "Destroy this room", @room, method: :delete %>
+    </div>
+  </div>
 </div>
