@@ -1,14 +1,29 @@
+<style type="text/css">
+/* Required for proper centering */
+html, body{
+    height:100vh;
+    width:100vw;
+}
+</style>
+
 <p style="color: green"><%= notice %></p>
 
-<h1>Players</h1>
+<!-- Outer container, full page width and height, red border -->
+<div class="container-fluid d-flex justify-content-center align-items-center" style="height:100vh; overflow:hidden; border: 2px solid green">
+  <!-- Inner row, half the width and height, centered, blue border -->
+  <div class="row text-center d-flex align-items-center" style="overflow:hidden; width:75vw; height:75vh; border: 1px solid red">
 
-<div id="players">
-  <% @players.each do |player| %>
-    <%= render player %>
-    <p>
-      <%= link_to "Show this player", player %>
-    </p>
-  <% end %>
-</div>
+    <h1>Players and Bankers</h1>
 
-<%= link_to "New player", new_player_path %>
+    <div id="players">
+      <% @players.each do |player| %>
+        <%= render player %>
+        <p>
+          <%= link_to "Show this player", player %>
+        </p>
+      <% end %>
+    </div>
+
+    <%= button_to "New player", new_player_path, :method => :get %>
+  </end>
+</end>
